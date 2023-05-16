@@ -1,0 +1,21 @@
+{
+  "name": "dungha",
+  "version": "1.0.0",
+  "description": "Dunghaosk",
+  "main": "script.js",
+  "scripts": {
+    "test": "dungha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "profiledungha"
+  },
+  "keywords": [
+    "125"
+  ],
+  "author": "Dungha",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
