@@ -286,17 +286,15 @@ body
 {
     width: 70px;
     height: 70px;
-    border-radius: 50%;
     margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.i:hover
+.circle:hover
 {
+    border: inset 4px;
     border-radius: 50%;
     border-color:rgb(36, 36, 36);
 }
-i
-{
-}
+
