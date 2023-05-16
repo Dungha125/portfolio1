@@ -175,12 +175,12 @@ body
     background: linear-gradient(90deg, rgba(211,221,246,1) 0%, rgba(250,238,213,1) 100%);
     box-shadow: 0 2px 10px rgb(159, 159, 159);
 }
-.content .skills
+.content #skills
 {
-    height: 450px;  
+    height: max-content;
     border-radius: 20px;
     margin: 20px;
-    background: linear-gradient(90deg, rgb(255, 229, 181) 0%, rgb(145, 237, 255) 100%);
+    background: linear-gradient(90deg, rgb(255, 229, 181) 0%, rgba(213,244,250,1) 100%);
     box-shadow: 0 2px 10px rgb(159, 159, 159);
 }
 .content .contact
@@ -254,3 +254,21 @@ body
     font-style: italic;
 }
 
+/*skill*/
+#skills
+{
+    padding: 20px;
+}
+.thongtinskills
+{
+    margin: 20px;
+}
+.thongtinskills h1
+{
+    margin: 20px 0;
+}
+.thongtinskills .kynang
+{
+    font-weight:normal;
+    font-style: italic;
+}
