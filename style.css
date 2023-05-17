@@ -4,7 +4,11 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppin', sans-serif;
-    transition: all 0.1s ease;
+    transition: all 0.3s ease;
+}
+html
+{
+    scroll-behavior: smooth;
 }
 body
 {
@@ -13,40 +17,71 @@ body
 .nav
 {
     position: fixed;
-    top: 250px;
-    left: 50px;
+    top:0;
+    left: 0;
     display: flex;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(240, 255, 255, 0.282);
-    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(240, 255, 255);
     align-items: center;
     box-shadow: 5px 5px 10px rgb(186, 186, 186);
+    z-index: 2;
 }
+
+@media (max-width:955px) {
+    /* Áp dụng kiểu CSS cho kích thước màn hình nhỏ hơn 768px */
+    .nav
+    {
+        box-shadow: none;
+        background: linear-gradient(90deg, rgba(40,118,186,1) 0%, rgba(0,164,133,1) 100%);
+    }
+    .nav .list {
+        background-color: #fff;
+        border-radius: 1.5rem 1.5rem 0 0;
+        bottom: 0;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.2);
+        left: 0;
+        padding: 2rem 1.5rem 4rem;
+        position: fixed;
+        transition: .6s ease;
+        width: 100%;
+        height: 20%;
+        justify-content: space-around; 
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .nav li{
+       
+    }
+  }
+
 .list
 {
     list-style: none;
     margin-top: 10px;
-    width: 100%;
     padding: 0;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
 }
 .nav li
 {
     display: flex;
-    width: 100%;
+    height: 100%;
     margin-bottom: 10px;
     border-radius: 10px;
     justify-content: center;
 }
 .nav .list a
 {
-    color:rgb(75, 0, 95);
+    color:rgb(56, 88, 167);
     text-align: center;
     font-weight: 600;
     font-size: 22px;
     text-decoration: none;
     width: 200px;
-
+    line-height: 50px;
 }
 /*.nav li :hover
 {
@@ -74,7 +109,7 @@ body
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     inset: 0 0 0 0;
-    background: linear-gradient(90deg, rgb(114, 230, 230) 0%, rgb(255, 160, 160)100%);
+    background: linear-gradient(90deg, rgb(150, 255, 211) 0%, rgb(65, 211, 175)100%);
     z-index: -1;
     transition: transform .3s ease;
   }
@@ -90,23 +125,26 @@ body
     }
   }
 
+.main
+{
+    margin-top: 50px;
+}
 
 /*Thong tin chinh*/
 .infor
 {
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 100vh;
     margin: 10px 0px;
     background: linear-gradient(90deg, rgba(40,118,186,1) 0%, rgba(0,164,133,1) 100%);
     justify-content: center;
     align-items: center;
-    z-index: 1;
     color: white;
 }
 .infor .anh
 {
-    width: 30%;
+    width: 40%;
     min-width: 350px;
     height: 100%;
     display: flex;
@@ -115,25 +153,75 @@ body
 }
 .infor .anh img
 {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-
+    border: solid 3px rgb(211, 252, 255);
+    box-shadow: 0px 0px 20px white;
+    z-index: 1;
 }
+/*hieu ung*/
+
+.wave1 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #e1e2ff;
+    border-radius: 50%;
+    animation: waveEffect 2s linear infinite;
+  }
+  
+  @keyframes waveEffect {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  .wave2 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #9bd7ff;
+    border-radius: 50%;
+    animation: waveEffectw 2s linear infinite;
+  }
+  
+  @keyframes waveEffectw {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.7);
+      opacity: 0;
+    }
+  }
+
 .thongtin
 {
-    margin: 10px;
+    margin: 20px;
     width: 90%;
     min-width: 450px;
-    height: 180px;
+    height: 90%;
     border-radius: 10px;
-    box-shadow: 0px 3px 3px rgba(51, 51, 51, 0.758);
+    box-shadow: 0px 3px 20px rgba(51, 51, 51, 0.758);
+    display: flex;
+    align-items: center;
+}
+.thongtin div
+{
+    margin-left: 15px;
 }
 .thongtin .chitiet
 {
      margin-top: 20px;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 40px;
     list-style: none;
 }
 .thongtin .chitiet h1
@@ -143,6 +231,7 @@ body
 .thongtin .chitiet li
 {
     margin: 10px 0;
+    font-size:25px;
 }
 .thongtin .chitiet i
 {
@@ -156,40 +245,50 @@ body
 .content
 {
     margin-top: 10px;
-    margin-left: 280px;
     
 }
 .content #about
 {
     height: max-content;  
     border-radius: 20px;
-    margin: 20px;
-    background: linear-gradient(90deg, rgba(211,246,239,1) 0%, rgba(222,250,213,1) 100%);
-    box-shadow: 0 2px 10px rgb(159, 159, 159);
+    margin: 40px;
+    padding-top: 90px;
 }
 .content #education
 {
     height: max-content;  
     border-radius: 20px;
-    margin: 20px;
-    background: linear-gradient(90deg, rgba(211,221,246,1) 0%, rgba(250,238,213,1) 100%);
-    box-shadow: 0 2px 10px rgb(159, 159, 159);
+    margin: 40px;
+    padding-top: 90px;
+
 }
 .content #skills
 {
     height: max-content;
     border-radius: 20px;
-    margin: 20px;
-    background: linear-gradient(90deg, rgb(255, 229, 181) 0%, rgba(213,244,250,1) 100%);
-    box-shadow: 0 2px 10px rgb(159, 159, 159);
+    margin: 40px;
+    padding-top: 50px;
+
 }
 .content #contact
 {
     height: max-content;  
     border-radius: 20px;
-    margin: 20px 20px 40px 20px;
-    background: linear-gradient(90deg, rgba(218,219,219,1) 0%, rgba(200,200,200,1) 100%);
-    box-shadow: 0 2px 10px rgb(159, 159, 159);
+    margin: 40px 40px 0 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Titlet
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 50px;
+    color:rgb(58, 99, 164);
 }
 
 /*table about*/
@@ -208,7 +307,6 @@ body
     text-indent: initial;
     border-spacing: 10px;
     border-color: gray;
-
 }
 .table-about tbody
 {
@@ -279,7 +377,7 @@ body
 {
     display: flex;
     padding: 20px;
-    color:rgb(36, 36, 36);
+    color: rgb(58, 99, 164);
     font-size: 60px;
 }
 .circle
@@ -293,8 +391,24 @@ body
 }
 .circle:hover
 {
-    border: inset 4px;
+    border: solid 3px;
     border-radius: 50%;
-    border-color:rgb(36, 36, 36);
+    border-color:white;
+}
+.circle a 
+{
+    height: 60px;
 }
 
+.circle a i
+{
+    line-height: 60px;
+    color:white;
+}
+
+.footer
+{
+    width: 100%;
+    heigth: 100px;
+    background: linear-gradient(90deg, rgb(53, 164, 133) 0%, rgb(75, 185, 219) 100%);
+}
