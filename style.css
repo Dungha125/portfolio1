@@ -28,30 +28,6 @@ body
     z-index: 2;
 }
 
-@media (max-width:955px) {
-    /* Áp dụng kiểu CSS cho kích thước màn hình nhỏ hơn 768px */
-    .nav
-    {
-        position: absolute;
-        box-shadow: none;
-        background: linear-gradient(90deg, rgba(40,118,186,1) 0%, rgba(0,164,133,1) 100%);
-    }
-    .nav .list {
-        background-color: #fff;
-        border-radius: 1.5rem 1.5rem 0 0;
-        bottom: 0;
-        box-shadow: 0 -1px 4px rgba(0,0,0,.2);
-        left: 0;
-        padding: 2rem 1.5rem 4rem;
-        position: fixed;
-        transition: .6s ease;
-        width: 100%;
-        height: 20%;
-        justify-content: space-around; 
-        display: flex;
-        flex-wrap: wrap;
-    }
-  }
 
 .list
 {
@@ -379,29 +355,7 @@ body
     font-size: 35px;
 }
 
-@media (max-width:955px) {
-    /* Áp dụng kiểu CSS cho kích thước màn hình nhỏ hơn 768px */
-    #backtotop
-    {
-        position: fixed;
-        bottom: 165px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        background-color: #333;
-        color: #fff;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 50px;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-    }
-    #backtotop i 
-    {
 
-    }
-}
 /*skill*/
 #skills
 {
@@ -461,4 +415,341 @@ body
     width: 100%;
     heigth: 100px;
     background: linear-gradient(90deg, rgb(53, 164, 133) 0%, rgb(75, 185, 219) 100%);
+}
+
+/*respon*/
+
+@media only screen and (max-width: 768px) {
+
+.nav
+{
+        position: absolute;
+        box-shadow: none;
+        background: linear-gradient(90deg, rgba(40,118,186,1) 0%, rgba(0,164,133,1) 100%);
+    }
+.nav .list {
+        background-color: #fff;
+        border-radius: 1.5rem 1.5rem 0 0;
+        bottom: 0;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.2);
+        left: 0;
+        padding: 2rem 1.5rem 2rem;
+        position: fixed;
+        transition: .6s ease;
+        width: 100%;
+        height: 12%;
+        justify-content: space-around; 
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+.nav li
+{
+    display: flex;
+    height: 100%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.nav .list a
+{
+    color:rgb(56, 88, 167);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 100%;
+    padding: 0 5px;
+    line-height: 100%;
+}
+/*.nav li :hover
+{
+    font-size: 26px;
+    transition: .2s ease;
+    background-color: rgb(166, 200, 194);
+    border-radius: 20px;
+    padding: 10px;
+}*/
+
+
+/*Chay hieu ung nav*/
+.nav li ::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+.nav li :hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+.nav li ::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: linear-gradient(90deg, rgb(150, 255, 211) 0%, rgb(65, 211, 175)100%);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+  .nav li  {
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  @media (orientation: landscape) {
+    .list {
+      grid-auto-flow: column;
+    }
+  }
+
+
+
+
+.main .infor
+{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 8px 0px 0px 0px;
+    background: linear-gradient(90deg, rgba(40,118,186,1) 0%, rgba(0,164,133,1) 100%);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+}
+.main .infor .anh
+{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anh
+{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anh img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 3px rgb(211, 252, 255);
+    box-shadow: 0px 0px 20px white;
+    z-index: 1;
+}
+/*hieu ung*/
+
+.wave1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #e1e2ff;
+    border-radius: 50%;
+    animation: waveEffect 2s linear infinite;
+  }
+  
+  @keyframes waveEffect {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.3);
+      opacity: 0;
+    }
+  }
+
+  .wave2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #9bd7ff;
+    border-radius: 50%;
+    animation: waveEffectw 2s linear infinite;
+  }
+  
+  @keyframes waveEffectw {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+.infor .thongtin
+{
+    margin: 10px;
+    width: 90%;
+    min-width: 30%;
+    height: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 20px rgba(51, 51, 51, 0.758);
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(156, 229, 217, 0.277) 0%, rgba(77,157,235,1) 100%);
+}
+.thongtin div
+{
+    margin-left: 5px;
+}
+.thongtin .chitiet
+{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 30px;
+    list-style: none;
+}
+.thongtin .chitiet h1
+{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.thongtin .chitiet li
+{
+    margin: 10px 0;
+    font-size:15px;
+}
+.thongtin .chitiet i
+{
+    margin-right: 10px;
+}
+.thongtin .chitiet a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.content
+{
+    margin-top: 10px;
+    
+}
+.content #about
+{
+
+    height: max-content;  
+    border-radius: 20px;
+    margin: 40px 5px;
+    padding-top: 30px;
+}
+.content #education
+{
+    height: max-content;  
+    border-radius: 20px;
+    margin: 40px;
+    padding-top: 90px;
+
+}
+.content #skills
+{
+    height: max-content;
+    border-radius: 20px;
+    margin: 40px;
+    padding-top: 50px;
+
+}
+.content #contact
+{
+    height: max-content;  
+    border-radius: 20px;
+    margin: 40px 20px 50px 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Titlet
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 50px;
+    color:rgb(58, 99, 164);
+}
+
+/*table about*/
+#about
+{
+    margin: 20px;
+
+}
+#about h1
+{
+    margin-bottom: 20px;
+}
+.table-about
+{
+    display: table;
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 10px;
+    border-color: gray;
+}
+.main .content-about
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.table-about tbody
+{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.title-about
+{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.tieude-about
+{
+
+    padding:5px 0px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.noidung-about
+{
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#about .anh
+{
+    margin-top: 30px;
+}
+
+#backtotop
+{
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+  
 }
