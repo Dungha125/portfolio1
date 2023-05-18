@@ -51,9 +51,6 @@ body
         display: flex;
         flex-wrap: wrap;
     }
-    .nav li{
-       
-    }
   }
 
 .list
@@ -361,6 +358,50 @@ body
     font-style: italic;
 }
 
+#backtotop
+{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            display: block;
+            cursor: pointer;
+}
+#backtotop i
+{
+    margin-top: 9px;
+    font-size: 35px;
+}
+
+@media (max-width:955px) {
+    /* Áp dụng kiểu CSS cho kích thước màn hình nhỏ hơn 768px */
+    #backtotop
+    {
+        position: fixed;
+        bottom: 165px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+    #backtotop i 
+    {
+
+    }
+}
 /*skill*/
 #skills
 {
